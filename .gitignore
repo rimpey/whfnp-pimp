@@ -1,6 +1,5 @@
 /bootstrap/compiled.php
 /vendor
-composer.lock
 composer.phar
 .DS_Store
 .idea
@@ -64,6 +63,3 @@ Temporary Items
 
 # sftp configuration file
 sftp-config.json
-
-### ElasticBeanstalk ###
-.elasticbeanstalk/
