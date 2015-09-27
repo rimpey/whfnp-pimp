@@ -71,5 +71,4 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 
-    DirectoryIndex index.php
 </IfModule>
