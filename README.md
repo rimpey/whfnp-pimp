@@ -1,13 +1,46 @@
 # pimpmycause-rebuild
 Pimp My Cause Rebuild
 
-# Installation & Setup Linux/Mac
+
+# 1. Install PHP and mcrypt
+## Mac OSX
+1. Install PHP if needed
+2. Install [HomeBrew](http://brew.sh/)
+3. Install mcrypt php extention `brew install php54-mcryp`
+
+## Windows
+n/a
+
+## Linux
+This needs review:
+
+1. Install PHP if needed
+2. Install HomeBrew http://brew.sh/
+3. Install mcrypt php extention `brew install php54-mcryp`
+
+
+# 2. Install OctoberCMS
+## Windows
+ 1. [Install Composer](https://github.com/composer/windows-setup)
+ 2. Follow the October CMS Command Line [installation instructions](http://octobercms.com/docs/console/commands#console-install)
+ 
+## Mac OSX
+1. [Install Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
+2. Follow the October CMS Command Line [installation instructions](http://octobercms.com/docs/console/commands#console-install)
+
+# 3. Get the code
+## Backend
+1. In the same folder that has cotobercms and composer clone the repo `git clone git@github.com:womenhackfornonprofits/pimpmycause-rebuild.git`
+
+
+## Front End 
+(soon will be merged with octobercms)
 
 1. First you will need to install NPM to manage packages https://nodejs.org/
 2. Clone the repo `git clone git@github.com:womenhackfornonprofits/pimpmycause-rebuild.git`
 3. Install all required packages by running `npm install` within the /frontend/ directory, this will read the package.json file and install all required packages.
 
-# Local Server Installation
+# 4. Local Server Installation
 To view .php scripts on your local machine a local web server must be installed. It's always best to install the recommend version. **MAMP** can now be used on *Windows* as well as *Mac*, however the installation differs.
   - **MAMP:** (https://www.mamp.info/en/)
 
@@ -21,10 +54,5 @@ To view .php scripts on your local machine a local web server must be installed.
 7. **http://localhost:8888** will take you to your **document root**. From here you can navigate to your ***pimpmycause-rebuild*** repo and your local changes can be viewed
 
 ## Windows
-1.   
+coming soon
 
-## October CMS Installation
-1. Install Composer
-  - Windows: (https://github.com/composer/windows-setup)
-  - Mac: (https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
-2.  Follow the October CMS Command Line Installation instructions (http://octobercms.com/docs/console/commands#console-install)
