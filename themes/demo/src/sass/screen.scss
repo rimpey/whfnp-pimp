@@ -20,24 +20,44 @@ body {
     background-color: $white;
 
 }
+section {
+	min-height: 30em;
+}
+
+.accent-colour-1 {
+	background-color: #77C7AC;
+}
+
+.accent-colour-2 {
+	background-color: #D47689;
+}
 
 #container {
-	padding-bottom: $footer-height;
+	//padding-bottom: $footer-height;
 	background-color: $white;
+}
+#banner {
+	min-height: 3em;
+	background-color: #927F92;
 }
 
 footer {
+	p {
+		padding: 2em;
+	}
 	height: $footer-height;
 	background-color: $grey;
-	position: absolute;
+	//position: absolute;
    	bottom: 0;
+   	text-align: center;
+   	vertical-align: middle;
    	width: 100%;
    	height: $footer-height;   /* Height of the footer */
 }
 
 nav {
 	height: $nav-height;
-	background-color: $grey;
+	background-color: $white;
 	width: 100%;
 	margin: 0 auto;
 	padding: 0;
@@ -62,6 +82,7 @@ nav {
 			font-size: $base-font-size;
 			a {
 				color: $link-color;
+				text-decoration: none;
 				&:visited {
 					color: $link-color;
 				}

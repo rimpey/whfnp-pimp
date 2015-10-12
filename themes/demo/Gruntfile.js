@@ -17,9 +17,9 @@ grunt.loadNpmTasks('grunt-contrib-sass');
 
 grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
-  s3settings: grunt.file.readJSON('s3settings.json'),
+  //s3settings: grunt.file.readJSON('s3settings.json'),
 
-  aws_s3: {
+  /**aws_s3: {
     options: {
       accessKeyId: '<%= s3settings.key %>', // Use the variables
       secretAccessKey: '<%= s3settings.secret %>', // You can also use env variables
@@ -36,7 +36,7 @@ grunt.initConfig({
           ContentEncoding: 'gzip', // applies to all the files!
           CacheControl: 'max-age=290304000, public',
         }**/
-      },
+      /**},
       files: [
         {expand: true, cwd: 'deploy/', src: ['**'], dest: ''},
       ]
@@ -57,11 +57,11 @@ grunt.initConfig({
         {expand: true, cwd: 'src/', src: ['*.html'], dest: 'deploy/', filter: 'isFile'},
       ]
     }
-  },
+  },**/
   sass: {
     dist: {
       files: {
-        'src/css/screen.css': 'src/sass/screen.scss'
+        'assets/css/theme.css': 'src/sass/screen.scss'
       }
     }
   },
