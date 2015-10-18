@@ -4,9 +4,9 @@ Pimp My Cause Rebuild
 
 # 1. Install PHP and mcrypt
 ## Mac OSX
-1. Install PHP if needed
+1. Install PHP 5.6 if needed ([Installation Guide](http://ziad.eljammal.com/install-php-5-5-on-mac-os-x/). Make sure you run command `curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6` during step 1. as this guide is for installing php 5.5)
 2. Install [HomeBrew](http://brew.sh/)
-3. Install mcrypt php extention `brew install php54-mcryp`
+3. Install mcrypt php extention `brew install php54-mcrypt`
 
 ## Windows
 n/a
@@ -14,16 +14,16 @@ n/a
 ## Linux
 This needs review:
 
-1. Install PHP if needed
-2. Install HomeBrew http://brew.sh/
-3. Install mcrypt php extention `brew install php54-mcryp`
+1. Install PHP 5.6 if needed
+2. Install [HomeBrew](http://brew.sh/)
+3. Install mcrypt php extention `brew install php54-mcrypt`
 
 
 # 2. Install OctoberCMS
 ## Windows
  1. [Install Composer](https://github.com/composer/windows-setup)
  2. Follow the October CMS Command Line [installation instructions](http://octobercms.com/docs/console/commands#console-install)
- 
+
 ## Mac OSX
 1. [Install Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 2. Follow the October CMS Command Line [installation instructions](http://octobercms.com/docs/console/commands#console-install)
@@ -32,8 +32,7 @@ This needs review:
 ## Backend
 1. In the same folder that has cotobercms and composer clone the repo `git clone git@github.com:womenhackfornonprofits/pimpmycause-rebuild.git`
 
-
-## Front End 
+## Front End
 (soon will be merged with octobercms)
 
 1. First you will need to install NPM to manage packages https://nodejs.org/
@@ -56,3 +55,5 @@ To view .php scripts on your local machine a local web server must be installed.
 ## Windows
 coming soon
 
+# 5. Unit Testing
+PHP Unit is used for backend unit testing and requires PHP 5.6. It can be installed via Composer `composer global require "phpunit/phpunit=5.0.*"`
