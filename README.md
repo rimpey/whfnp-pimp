@@ -9,7 +9,8 @@ Pimp My Cause Rebuild
 3. Install mcrypt php extention `brew install php54-mcrypt`
 
 ## Windows
-n/a
+`mcrypt` installs automatically with PHP for Windows
+1. Install PHP 5.6 if needed ([Installation Guide](http://windows.php.net/download/))
 
 ## Linux
 This needs review:
@@ -55,5 +56,8 @@ To view .php scripts on your local machine a local web server must be installed.
 ## Windows
 coming soon
 
-# 5. Unit Testing
-PHP Unit is used for backend unit testing and requires PHP 5.6. It can be installed via Composer `composer global require "phpunit/phpunit=5.0.*"`
+# 5. Unit Testing and Static Analysis
+## PHP Unit
+PHP Unit is used for backend unit testing and requires PHP 5.6. It can be installed via **Composer** `composer global require "phpunit/phpunit=5.0.*"`. For more info refer to the [PHP manual](https://phpunit.de/manual/current/en/phpunit-book.pdf)
+
+## Static Analysis Tool
