@@ -1,6 +1,6 @@
 # pimpmycause-rebuild
 Pimp My Cause Rebuild
-
+If you are a windows user, you can skeep al the below stages and skip to the windows section at the end
 
 # 1. Install PHP and mcrypt
 ## Mac OSX
@@ -21,10 +21,6 @@ This needs review:
 
 
 # 2. Install OctoberCMS
-## Windows
- 1. [Install Composer](https://github.com/composer/windows-setup)
- 2. Follow the October CMS Command Line [installation instructions](http://octobercms.com/docs/console/commands#console-install)
-
 ## Mac OSX
 1. [Install Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 2. Follow the October CMS Command Line [installation instructions](http://octobercms.com/docs/console/commands#console-install)
@@ -54,10 +50,24 @@ To view .php scripts on your local machine a local web server must be installed.
 7. **http://localhost:8888** will take you to your **document root**. From here you can navigate to your ***pimpmycause-rebuild*** repo and your local changes can be viewed
 
 ## Windows
-coming soon
+1. First clone this repository to your computer.
+2. Download MAMP (make sure it's the Windows version)
+3. In the MAMP GUI go to Preferences:
+  a. Leave the start page url as empty
+  b. Ports tab - click on "Set MAMP port to default", this will change Apache to **8888** and MySQL to **8889**
+  c. PHP tab - the php version should be 5.6.8
+  d. Web Server - choose "Select" and navigate to the project directory.
+4. Before you try out MAMP and run the servers to go to the start page (via the GUI), you should make sure that you are on 
+   the development branch (not on the master branch).
+5. If your MAMP is working properly with the project, you should get an error message saying that you are missing vendor
+   files
+6. This will be the time to install Composer (which will handle the php dependencies).
+   Download Composer - **https://getcomposer.org/download/** you will find there a Windows Installer. Run the .exe file .
+7. Before running the .exe file - make sure that you have php on your windows in **C:\php\** and in your PATH as well!
+   Another thing to check for, will be going over the php5.6.8 .ini files and making sure the openssl line is not commented     out. There are 2 files in the **C:\MAMP\bin\php\php5.6.8** folder, and one file on the **C:\MAMP\conf\php5.6.8**.
+8. If Composer is still complaining and you search google and stack overflow for an answer with no success even after you've    added a new variable to the PATH (**PHPRC**)- you might want to move on to manual installation of Composer which includes    downlodaing the latest .phar file from the Composer website (you'll find it at the bottom of the page there) and asking      one of us for the scripts we have in **C:\ProgramData\ComposerSetup\bin** and the project's vendor files.
 
 # 5. Unit Testing and Static Analysis
 ## PHP Unit
 PHP Unit is used for backend unit testing and requires PHP 5.6. It can be installed via **Composer** `composer global require "phpunit/phpunit=5.0.*"`. For more info refer to the [PHP manual](https://phpunit.de/manual/current/en/phpunit-book.pdf)
 
-## Static Analysis Tool
