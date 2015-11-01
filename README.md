@@ -41,7 +41,7 @@ See 4. Local Server Installation - Windows
 
 # 4. Local Server Installation
 To view .php scripts on your local machine a local web server must be installed. It's always best to install the recommend version. **MAMP** can now be used on *Windows* as well as *Mac*, however the installation differs.
-  - [**MAMP:**] (https://www.mamp.info/en/)
+  - [**MAMP**] (https://www.mamp.info/en/)
 
 ## Mac OSx
 1. Once installed launch the MAMP application
@@ -50,7 +50,7 @@ To view .php scripts on your local machine a local web server must be installed.
 4. By default the port number will be **8888**
 5. Go back to the **MAMP** application
 6. The **document root** (the directory with the cloned repo) must be set in *Preferences* -> *Web Server*
-7. **http://localhost:8888** will take you to your **document root**. From here you can navigate to your ***pimpmycause-rebuild*** repo and your local changes can be viewed once OctoberCMS is installed ()
+7. **http://localhost:8888** will take you to your **document root**. From here you can navigate to your ***pimpmycause-rebuild*** repo and your local changes can be viewed 
 
 ## Windows
 1. In the MAMP GUI go to Preferences:
