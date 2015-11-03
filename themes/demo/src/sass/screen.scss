@@ -39,6 +39,75 @@ section {
 #banner {
 	min-height: 3em;
 	background-color: #927F92;
+	a {
+		color: $white; 
+		text-decoration: none;
+		min-height: 3em;
+		text-align: left;
+		float: right;
+		margin-right:3em;
+		padding: $padding-margin-value;
+		&:visited {
+			color: $link-color;
+		}
+	}
+}
+form {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 20em;
+  padding: $padding-margin-value;
+}
+
+input[type=text] {
+  display: block;
+  width: 100%;
+  padding: $padding-margin-value;
+  margin: $padding-margin-value auto $padding-margin-value auto;
+  border: 1px solid $grey;
+  color: $black;
+}
+
+input[type=email] {
+  display: block;
+  padding: $padding-margin-value;
+  margin: 0 auto $padding-margin-value auto;
+  width: 100%;
+  border: 1px solid $grey;
+  color: $black;
+}
+
+input[type=number] {
+  display: block;
+  padding: $padding-margin-value;
+  margin: 0 auto $padding-margin-value auto;
+  width: 100%;
+  border: 1px solid $grey;
+  color: $black;
+}
+
+input[type=submit] {
+  display: block;
+  padding: $padding-margin-value;
+  margin: 0 auto $padding-margin-value auto;
+  width: 100%;
+  border: none;
+  opacity: 0.7;
+  box-shadow: .5em .5em 0px rgba(0,0,0,.1);
+  background-color: $white;
+  color: $black;
+  &:hover {
+    opacity:1;  
+  }
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: $padding-margin-value;
+  margin: 0 auto $padding-margin-value auto;
+  border: 1px solid $grey;
+  color: $black;
 }
 
 footer {

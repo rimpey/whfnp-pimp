@@ -201,6 +201,67 @@ section {
 #banner {
   min-height: 3em;
   background-color: #927F92; }
+  #banner a {
+    color: #fcfcfc;
+    text-decoration: none;
+    min-height: 3em;
+    text-align: left;
+    float: right;
+    margin-right: 3em;
+    padding: 1em; }
+    #banner a:visited {
+      color: #3c3c3c; }
+
+form {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 20em;
+  padding: 1em; }
+
+input[type=text] {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  margin: 1em auto 1em auto;
+  border: 1px solid #e3dedb;
+  color: #3c3c3c; }
+
+input[type=email] {
+  display: block;
+  padding: 1em;
+  margin: 0 auto 1em auto;
+  width: 100%;
+  border: 1px solid #e3dedb;
+  color: #3c3c3c; }
+
+input[type=number] {
+  display: block;
+  padding: 1em;
+  margin: 0 auto 1em auto;
+  width: 100%;
+  border: 1px solid #e3dedb;
+  color: #3c3c3c; }
+
+input[type=submit] {
+  display: block;
+  padding: 1em;
+  margin: 0 auto 1em auto;
+  width: 100%;
+  border: none;
+  opacity: 0.7;
+  box-shadow: 0.5em 0.5em 0px rgba(0, 0, 0, 0.1);
+  background-color: #fcfcfc;
+  color: #3c3c3c; }
+  input[type=submit]:hover {
+    opacity: 1; }
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  margin: 0 auto 1em auto;
+  border: 1px solid #e3dedb;
+  color: #3c3c3c; }
 
 footer {
   height: 5em;
