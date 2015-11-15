@@ -19,7 +19,9 @@ In its current form this skeleton project is ready to be integrated into your Oc
       git fetch
       git reset --hard origin/master
 
-As yet this repo is simply the infrastracture of the pimp website and is in the process of being built so will eventually contain pages built statically for later inclusion in the October CMS.
+The PATH/TO/REPO is the https url link located in GitHub and can be copied and pasted into the command line terminal.A
+
+s yet this repo is simply the infrastracture of the pimp website and is in the process of being built so will eventually contain pages built statically for later inclusion in the October CMS.
 
 
 # Installation wizard for October

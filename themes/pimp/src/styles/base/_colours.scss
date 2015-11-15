@@ -1,7 +1,9 @@
-// =================
-// Global Colours
-// =================
+/* =================================
+   BASE / COLOURS
+   ================================= */
 
+
+// Colour Values
 $white: #ffffff;
 // 255 255 255
 $purple: #3b1d4a;
@@ -14,3 +16,33 @@ $mustard: #d7be01;
 // 215 190 1
 $grey: #c8c7c7;
 // 200 199 199
+
+
+// Text
+$colr-txt: $white;
+$colr-txt-dropdown: $purple;
+// Button - all the same for: submit, signup and Continue (join)
+$colr-btn-signin: $pink;
+$colr-btn: $purple;
+// Panel for each section and banner for top
+$colr-bnr: $purple;
+$colr-pnl-hero: $pink;
+$colr-pnl-marketing: $purple;
+$colr-pnl-causes: $mustard;
+$colr-pnl-marketers: $green;
+$colr-pnl-summary: $white;
+$colr-pnl-talkabout: $purple;
+$colr-pnl-contactus: $grey;
+$colr-pnl-signup: $pink;
+$colr-footer: $white;
+// Hero Panel
+$colr-hero-tile: $green;
+$colr-hero-tile2: $mustard;
+$colr-hero-txt: $purple;
+// Talking About Panel - banner background
+$colr-bnr-tweet: $pink;
+$colr-bnr-news: $pink;
+
+
+
+

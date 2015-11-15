@@ -1,1 +1,3 @@
-var a;
+$(document).foundation();
+
+$(document).ready();

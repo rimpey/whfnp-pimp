@@ -3,6 +3,8 @@
 module.exports = function(grunt) {
 	
 	grunt.initConfig({
+        
+//        pkg: grunt.file.readJSON('package.json'),
 
 		// Grunt will watch for file changes
         // Sass files changed in the styles folder/sub-dir will call the ['sass'] task
@@ -43,7 +45,7 @@ module.exports = function(grunt) {
                     cache: 'all',
                     cacheDir: '.ssi-cache',
                     baseDir: 'pages',  // dir where to locate files to be processed for ssi 
-                    includeRegex: /{% (partial) "([^"]+)" %}/g,
+                    includeRegex: /{% (partial) "([^"]+)" %}/,
                     ssiRegex: /{% (partial) "([^"]+)" %}/g
                 },
                 files: [{
@@ -88,7 +90,7 @@ module.exports = function(grunt) {
 
 		uglify: {
 			options: {
-				beautify: true,
+				beautify: false,
 				sourceMap: true,
 				sourceMapIncludeSources: true,
 				sourceMapName: '../assets/scripts/scripts.js.map'
@@ -96,7 +98,13 @@ module.exports = function(grunt) {
 			main: {
 				files: {
 					'../assets/scripts/scripts.js': [
-						'scripts/**/*.js'
+//						'scripts/**/*.js'
+                        'scripts/vendor/jquery.js',
+                        'scripts/vendor/fastclick.js',
+                        'scripts/vendor/jquery.cookie.js',
+                        'scripts/vendor/jquery.placeholder.js',
+                        'scripts/vendor/foundation.js',
+                        'scripts/scripts.js'
 					]
 				}
 			}
