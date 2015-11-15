@@ -99,11 +99,11 @@ module.exports = function(grunt) {
 				files: {
 					'../assets/scripts/scripts.js': [
 //						'scripts/**/*.js'
-                        'scripts/vendor/jquery.js',
-                        'scripts/vendor/fastclick.js',
-                        'scripts/vendor/jquery.cookie.js',
-                        'scripts/vendor/jquery.placeholder.js',
-                        'scripts/vendor/foundation.js',
+                        'scripts/vendors/jquery.js',
+                        'scripts/vendors/fastclick.js',
+                        'scripts/vendors/jquery.cookie.js',
+                        'scripts/vendors/jquery.placeholder.js',
+                        'scripts/vendors/foundation.js',
                         'scripts/scripts.js'
 					]
 				}
