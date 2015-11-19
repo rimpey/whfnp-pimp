@@ -7460,12 +7460,20 @@ th.hide-for-touch {
 /* =================================
    LAYOUT / FOOTER
    ================================= */
+.pnl-footer {
+  background-color: #ffffff; }
+
 /* =================================
    LAYOUT / FORMS
    ================================= */
 /* =================================
    LAYOUT / HEADER
    ================================= */
+.pnl-header {
+  background-color: #3b1d4a; }
+  .pnl-header .nav ul li a {
+    color: #ffffff; }
+
 /* =================================
    LAYOUT / NAV
    ================================= */
@@ -7475,6 +7483,40 @@ th.hide-for-touch {
 /* =================================
    PAGES / HOME 
    ================================= */
+.pnl-light-txt h1, .pnl-marketing h1, .pnl-causes h1, .pnl-marketers h1, .pnl-talkabout h1, .pnl-signup h1, .pnl-light-txt h2, .pnl-marketing h2, .pnl-causes h2, .pnl-marketers h2, .pnl-talkabout h2, .pnl-signup h2, .pnl-light-txt h3, .pnl-marketing h3, .pnl-causes h3, .pnl-marketers h3, .pnl-talkabout h3, .pnl-signup h3, .pnl-light-txt h4, .pnl-marketing h4, .pnl-causes h4, .pnl-marketers h4, .pnl-talkabout h4, .pnl-signup h4, .pnl-light-txt p, .pnl-marketing p, .pnl-causes p, .pnl-marketers p, .pnl-talkabout p, .pnl-signup p {
+  color: #ffffff;
+  text-align: center; }
+
+.pnl-dark-txt h1, .pnl-summary h1, .pnl-contactus h1, .pnl-dark-txt h2, .pnl-summary h2, .pnl-contactus h2, .pnl-dark-txt h3, .pnl-summary h3, .pnl-contactus h3, .pnl-dark-txt h4, .pnl-summary h4, .pnl-contactus h4, .pnl-dark-txt p, .pnl-summary p, .pnl-contactus p {
+  color: #3b1d4a;
+  text-align: center; }
+
+.pnl-hero {
+  background-color: #dc0e54; }
+  .pnl-hero h1, .pnl-hero h2, .pnl-hero h3, .pnl-hero h4 {
+    color: #ffffff; }
+
+.pnl-marketing {
+  background-color: #3b1d4a; }
+
+.pnl-causes {
+  background-color: #d7be01; }
+
+.pnl-marketers {
+  background-color: #809b29; }
+
+.pnl-summary {
+  background-color: #ffffff; }
+
+.pnl-talkabout {
+  background-color: #3b1d4a; }
+
+.pnl-contactus {
+  background-color: #c8c7c7; }
+
+.pnl-signup {
+  background-color: #dc0e54; }
+
 /* =================================
    PAGES / LOGIN 
    ================================= */

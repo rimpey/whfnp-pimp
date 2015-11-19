@@ -1,3 +1,15 @@
 /* =================================
    LAYOUT / HEADER
    ================================= */
+
+
+.pnl-header {
+    background-color: $colr-pnl-header;  
+    .nav {
+            ul {
+                 li a {
+                color: $colr-txt;    
+                }   
+            }
+    }
+}

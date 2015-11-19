@@ -1,3 +1,55 @@
 /* =================================
    PAGES / HOME 
    ================================= */
+
+.pnl-light-txt {
+    
+    h1, h2, h3, h4, p {
+        color: $colr-txt;
+        text-align: center;
+    }
+}
+.pnl-dark-txt {
+    
+    h1, h2, h3, h4, p {
+        color: $colr-txt-accent;
+        text-align: center;
+    }
+}
+
+.pnl-hero {
+    background-color: $colr-pnl-hero;
+    
+    h1, h2, h3, h4 {
+        color: $colr-txt;   
+    }
+}
+.pnl-marketing {
+    @extend .pnl-light-txt;
+    background-color: $colr-pnl-marketing;
+}
+.pnl-causes {
+    @extend .pnl-light-txt;
+    background-color: $colr-pnl-causes;
+}
+.pnl-marketers {
+    @extend .pnl-light-txt;
+    background-color: $colr-pnl-marketers;
+}
+.pnl-summary {
+    @extend .pnl-dark-txt;
+    background-color: $colr-pnl-summary;
+}
+.pnl-talkabout {
+    @extend .pnl-light-txt;
+    background-color: $colr-pnl-talkabout;
+}
+.pnl-contactus {
+    @extend .pnl-dark-txt;
+    background-color: $colr-pnl-contactus;
+}
+.pnl-signup {
+    @extend .pnl-light-txt;
+    background-color: $colr-pnl-signup;
+}
+
