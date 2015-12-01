@@ -3,6 +3,9 @@
 // =================
 
 @import "base/reset";
+@import "base/colours";
+@import "base/typography";
+@import "base/settings";
 
 // =================
 // Vendor
@@ -14,8 +17,7 @@
 // Site
 // =================
 
-@import "base/colours";
-@import "base/typography";
+
 
 @import "components/global";
 @import "components/buttons";

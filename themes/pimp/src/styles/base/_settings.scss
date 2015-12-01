@@ -55,7 +55,7 @@
 // $rem-base: 16px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
-@import 'foundation/functions';
+@import '../vendors/foundation/functions';
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
@@ -79,21 +79,22 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-// $row-width: rem-calc(1000);
-// $total-columns: 12;
-// $column-gutter: rem-calc(30);
+ $row-width: rem-calc(1200);
+ $total-columns: 12;
+ $column-gutter: rem-calc(20);
 
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+ $font-family-sans-serif: 'Open Sans', sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
-// $font-weight-normal: normal;
-// $font-weight-bold: bold;
+
+ $font-weight-normal: lighter;
+ $font-weight-bold: bold;
 
 // $white       : #FFFFFF;
 // $ghost       : #FAFAFA;
@@ -116,7 +117,7 @@ $include-html-global-classes: $include-html-classes;
 // $black       : #000000;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: $colr-txt;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -151,32 +152,32 @@ $include-html-global-classes: $include-html-classes;
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $small-breakpoint:  em-calc(640);
-// $medium-breakpoint: em-calc(1024);
-// $large-breakpoint:  em-calc(1440);
-// $xlarge-breakpoint: em-calc(1920);
+ $small-breakpoint:  em-calc(640);
+ $medium-breakpoint: em-calc(1024);
+ $large-breakpoint:  em-calc(1440);
+ $xlarge-breakpoint: em-calc(1920);
 
-// $small-range:   (0, $small-breakpoint);
-// $medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint);
-// $large-range:   ($medium-breakpoint + em-calc(1), $large-breakpoint);
-// $xlarge-range:  ($large-breakpoint  + em-calc(1), $xlarge-breakpoint);
+ $small-range:   (0, $small-breakpoint);
+ $medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint);
+ $large-range:   ($medium-breakpoint + em-calc(1), $large-breakpoint);
+ $xlarge-range:  ($large-breakpoint  + em-calc(1), $xlarge-breakpoint);
 // $xxlarge-range: ($xlarge-breakpoint + em-calc(1), em-calc(99999999));
 
-// $screen: "only screen";
+ $screen: "only screen";
 
 // $landscape: "#{$screen} and (orientation: landscape)";
 // $portrait: "#{$screen} and (orientation: portrait)";
 
-// $small-up: $screen;
-// $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
+ $small-up: $screen;
+ $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
 
-// $medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+ $medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
 // $medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
 
-// $large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+ $large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
 // $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
 
-// $xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
+ $xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
 // $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
 
 // $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
@@ -270,8 +271,8 @@ $include-html-global-classes: $include-html-classes;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
+$anchor-font-color: $primary-color;
+$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -446,8 +447,8 @@ $include-html-global-classes: $include-html-classes;
 // $button-lrg: rem-calc(18);
 
 // We use this to control the display property.
-// $button-display: inline-block;
-// $button-margin-bottom: rem-calc(20);
+//$button-display: inline-block;
+$button-margin-bottom: rem-calc(5);
 
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
@@ -461,13 +462,13 @@ $include-html-global-classes: $include-html-classes;
 // $button-font-align: center;
 
 // We use these to control various hover effects.
-// $button-function-factor: -20%;
+$button-function-factor: -20%;
 
 // We use these to control button border styles.
 // $button-border-width: 0;
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
-// $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
+$button-bg-color: $colr-btn-signin;
+$button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
 // $secondary-button-border-color: $secondary-button-bg-hover;
@@ -838,7 +839,7 @@ $include-html-global-classes: $include-html-classes;
 // Off Canvas Tab Bar Variables
 // $include-html-off-canvas-classes: $include-html-classes;
 
-// $tabbar-bg: $oil;
+ $tabbar-bg: $colr-mob-menu;
 // $tabbar-height: rem-calc(45);
 // $tabbar-icon-width: $tabbar-height;
 // $tabbar-line-height: $tabbar-height;
@@ -846,6 +847,7 @@ $include-html-global-classes: $include-html-classes;
 // $tabbar-middle-padding: 0 rem-calc(10);
 
 // Off Canvas Divider Styles
+$tabbar-left-section-border: green; // ?????????
 // $tabbar-left-section-border: solid 1px scale-color($tabbar-bg, $lightness: -50%);
 // $tabbar-right-section-border: $tabbar-left-section-border;
 
@@ -858,8 +860,8 @@ $include-html-global-classes: $include-html-classes;
 
 // Off Canvas Menu Variables
 // $off-canvas-width: rem-calc(250);
-// $off-canvas-bg: $oil;
-// $off-canvas-bg-hover: scale-color($tabbar-bg, $lightness: -30%);
+ $off-canvas-bg: $colr-mob-menu;
+ $off-canvas-bg-hover: $colr-mob-menu;
 // $off-canvas-bg-active: scale-color($tabbar-bg, $lightness: -30%);
 
 // Off Canvas Menu List Variables
@@ -874,7 +876,8 @@ $include-html-global-classes: $include-html-classes;
 // $off-canvas-label-margin:0;
 // $off-canvas-link-padding: rem-calc(10, 15);
 // $off-canvas-link-color: rgba($white, .7);
-// $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -25%);
+// $off-canvas-link-border-bottom: 1px solid scale-color($colr-txt, $lightness: -25%);
+
 // $off-canvas-back-bg: #444;
 // $off-canvas-back-border-top: $off-canvas-label-border-top;
 // $off-canvas-back-border-bottom: $off-canvas-label-border-bottom;
@@ -900,7 +903,7 @@ $include-html-global-classes: $include-html-classes;
 // Off Canvas Back-Link Overlay
 // $off-canvas-overlay-transition: background 300ms ease;
 // $off-canvas-overlay-cursor: pointer;
-// $off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, .5), 4px 0 4px rgba($black, .5);
+ $off-canvas-overlay-box-shadow: -4px 0 4px rgba($colr-mob-menu, .5), 4px 0 4px rgba($colr-mob-menu, .5);
 // $off-canvas-overlay-background: rgba($white, .2);
 // $off-canvas-overlay-background-hover: rgba($white, .05);
 
@@ -1403,8 +1406,8 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: $oil;
-// $topbar-bg: $topbar-bg-color;
+ $topbar-bg-color: $purple;
+ $topbar-bg: $topbar-bg-color;
 
 // Height and margin
 // $topbar-height: rem-calc(45);
@@ -1419,11 +1422,11 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-link-color-hover: $white;
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: $white;
-// $topbar-link-weight: $font-weight-normal;
-// $topbar-link-font-size: rem-calc(13);
+ $topbar-link-weight: $font-weight-normal;
+ $topbar-link-font-size: rem-calc(18);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-// $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-hover: $jet;
+ $topbar-link-bg: $topbar-bg;
+ $topbar-link-bg-hover: $topbar-bg;
 // $topbar-link-bg-color-hover: $charcoal;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
@@ -1436,11 +1439,11 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-button-top: 7px;
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: $oil;
+ $topbar-dropdown-bg: $topbar-bg;
 // $topbar-dropdown-link-color: $white;
 // $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
-// $topbar-dropdown-link-bg: $oil;
-// $topbar-dropdown-link-bg-hover: $jet;
+ $topbar-dropdown-link-bg: $topbar-bg;
+ $topbar-dropdown-link-bg-hover: $topbar-bg;
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: $white;
