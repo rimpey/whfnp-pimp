@@ -4,7 +4,7 @@
 
 
 //change properties for horizontal secondary menu
-.top-bar-section {
+//.top-bar-section {
 //    .has-dropdown {
 //        position: static;
 //    }
@@ -13,15 +13,16 @@
 //            width: auto;
 //        }
 //    }
-}
+//}
 
 .dropdown, .top-bar-section, .off-canvas-list {
-    li {
-        a {
-            &:hover {
-                font-weight: bold;
-                color: $colr-txt;
-            } 
+    ul li {
+            a {
+                color: $colr-txt-menu-item;
+
+                &:hover {
+                    color: $colr-txt;
+                } 
         }  
     }
 }

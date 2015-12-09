@@ -5748,13 +5748,13 @@ meta.foundation-mq-topbar {
       top: auto; }
       .top-bar-section .dropdown li a {
         background: #3b1d4a;
-        color: #ffffff;
+        color: #999999;
         line-height: 2.8125rem;
         padding: 12px 0.9375rem;
         white-space: nowrap; }
       .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
         background: #3b1d4a;
-        color: #ffffff; }
+        color: #999999; }
       .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
         background-color: #555555;
         color: #ffffff;
@@ -6374,7 +6374,7 @@ blockquote p {
   width: 45px;
   width: 45px;
   width: 2.8125rem;
-  border-right: green;
+  border-right: solid 1px #1e0f25;
   left: 0; }
 
 .right-small {
@@ -6386,7 +6386,7 @@ blockquote p {
   width: 45px;
   width: 45px;
   width: 2.8125rem;
-  border-left: green;
+  border-left: solid 1px #1e0f25;
   right: 0; }
 
 .tab-bar-section {
@@ -7493,7 +7493,7 @@ th.hide-for-touch {
 /* =================================
    LAYOUT / HEADER
    ================================= */
-.pnl-header {
+.pnl-header, #pnl-header-colr-extend {
   background-color: #3b1d4a; }
 
 .header-row-position-relative {
@@ -7561,9 +7561,10 @@ th.hide-for-touch {
 /* =================================
    LAYOUT / NAV
    ================================= */
-.dropdown li a:hover, .top-bar-section li a:hover, .off-canvas-list li a:hover {
-  font-weight: bold;
-  color: #ffffff; }
+.dropdown ul li a, .top-bar-section ul li a, .off-canvas-list ul li a {
+  color: #dbdbdb; }
+  .dropdown ul li a:hover, .top-bar-section ul li a:hover, .off-canvas-list ul li a:hover {
+    color: #ffffff; }
 
 ul.off-canvas-list > li > a {
   border-top: 1px ridge #ffffff;
@@ -7577,38 +7578,38 @@ ul.off-canvas-list > li > a:last-child {
 /* =================================
    PAGES / HOME 
    ================================= */
-.pnl-light-txt h1, .pnl-marketing h1, .pnl-causes h1, .pnl-marketers h1, .pnl-talkabout h1, .pnl-signup h1, .pnl-light-txt h2, .pnl-marketing h2, .pnl-causes h2, .pnl-marketers h2, .pnl-talkabout h2, .pnl-signup h2, .pnl-light-txt h3, .pnl-marketing h3, .pnl-causes h3, .pnl-marketers h3, .pnl-talkabout h3, .pnl-signup h3, .pnl-light-txt h4, .pnl-marketing h4, .pnl-causes h4, .pnl-marketers h4, .pnl-talkabout h4, .pnl-signup h4, .pnl-light-txt p, .pnl-marketing p, .pnl-causes p, .pnl-marketers p, .pnl-talkabout p, .pnl-signup p {
+.pnl-light-txt h1, .pnl-marketing h1, #pnl-marketing-colr-extend h1, .pnl-causes h1, #pnl-causes-colr-extend h1, .pnl-marketers h1, #pnl-marketers-colr-extend h1, .pnl-talkabout h1, #pnl-talkabout-colr-extend h1, .pnl-signup h1, #pnl-signup-colr-extend h1, .pnl-light-txt h2, .pnl-marketing h2, #pnl-marketing-colr-extend h2, .pnl-causes h2, #pnl-causes-colr-extend h2, .pnl-marketers h2, #pnl-marketers-colr-extend h2, .pnl-talkabout h2, #pnl-talkabout-colr-extend h2, .pnl-signup h2, #pnl-signup-colr-extend h2, .pnl-light-txt h3, .pnl-marketing h3, #pnl-marketing-colr-extend h3, .pnl-causes h3, #pnl-causes-colr-extend h3, .pnl-marketers h3, #pnl-marketers-colr-extend h3, .pnl-talkabout h3, #pnl-talkabout-colr-extend h3, .pnl-signup h3, #pnl-signup-colr-extend h3, .pnl-light-txt h4, .pnl-marketing h4, #pnl-marketing-colr-extend h4, .pnl-causes h4, #pnl-causes-colr-extend h4, .pnl-marketers h4, #pnl-marketers-colr-extend h4, .pnl-talkabout h4, #pnl-talkabout-colr-extend h4, .pnl-signup h4, #pnl-signup-colr-extend h4, .pnl-light-txt p, .pnl-marketing p, #pnl-marketing-colr-extend p, .pnl-causes p, #pnl-causes-colr-extend p, .pnl-marketers p, #pnl-marketers-colr-extend p, .pnl-talkabout p, #pnl-talkabout-colr-extend p, .pnl-signup p, #pnl-signup-colr-extend p {
   color: #ffffff;
   text-align: center; }
 
-.pnl-dark-txt h1, .pnl-summary h1, .pnl-contactus h1, .pnl-dark-txt h2, .pnl-summary h2, .pnl-contactus h2, .pnl-dark-txt h3, .pnl-summary h3, .pnl-contactus h3, .pnl-dark-txt h4, .pnl-summary h4, .pnl-contactus h4, .pnl-dark-txt p, .pnl-summary p, .pnl-contactus p {
+.pnl-dark-txt h1, .pnl-summary h1, #pnl-summary-colr-extend h1, .pnl-contactus h1, #pnl-contactus-colr-extend h1, .pnl-dark-txt h2, .pnl-summary h2, #pnl-summary-colr-extend h2, .pnl-contactus h2, #pnl-contactus-colr-extend h2, .pnl-dark-txt h3, .pnl-summary h3, #pnl-summary-colr-extend h3, .pnl-contactus h3, #pnl-contactus-colr-extend h3, .pnl-dark-txt h4, .pnl-summary h4, #pnl-summary-colr-extend h4, .pnl-contactus h4, #pnl-contactus-colr-extend h4, .pnl-dark-txt p, .pnl-summary p, #pnl-summary-colr-extend p, .pnl-contactus p, #pnl-contactus-colr-extend p {
   color: #3b1d4a;
   text-align: center; }
 
-.pnl-hero {
+.pnl-hero, #pnl-hero-colr-extend {
   background-color: #dc0e54; }
-  .pnl-hero h1, .pnl-hero h2, .pnl-hero h3, .pnl-hero h4 {
+  .pnl-hero h1, .pnl-hero h2, .pnl-hero h3, .pnl-hero h4, #pnl-hero-colr-extend h1, #pnl-hero-colr-extend h2, #pnl-hero-colr-extend h3, #pnl-hero-colr-extend h4 {
     color: #ffffff; }
 
-.pnl-marketing {
+.pnl-marketing, #pnl-marketing-colr-extend {
   background-color: #3b1d4a; }
 
-.pnl-causes {
+.pnl-causes, #pnl-causes-colr-extend {
   background-color: #d7be01; }
 
-.pnl-marketers {
+.pnl-marketers, #pnl-marketers-colr-extend {
   background-color: #809b29; }
 
-.pnl-summary {
+.pnl-summary, #pnl-summary-colr-extend {
   background-color: #ffffff; }
 
-.pnl-talkabout {
+.pnl-talkabout, #pnl-talkabout-colr-extend {
   background-color: #3b1d4a; }
 
-.pnl-contactus {
+.pnl-contactus, #pnl-contactus-colr-extend {
   background-color: #c8c7c7; }
 
-.pnl-signup {
+.pnl-signup, #pnl-signup-colr-extend {
   background-color: #dc0e54; }
 
 /* =================================

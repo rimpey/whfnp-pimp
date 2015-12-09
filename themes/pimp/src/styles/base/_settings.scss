@@ -106,7 +106,7 @@ $include-html-global-classes: $include-html-classes;
 // $gainsboro   : #DDDDDD;
 // $iron        : #CCCCCC;
 // $base        : #AAAAAA;
-// $aluminum    : #999999;
+ $aluminium    : #999999;
 // $jumbo       : #888888;
 // $monsoon     : #777777;
 // $steel       : #666666;
@@ -271,8 +271,8 @@ $primary-color: $colr-txt;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-$anchor-font-color: $primary-color;
-$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
+// $anchor-font-color: $primary-color;
+// $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -847,7 +847,7 @@ $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-fac
 // $tabbar-middle-padding: 0 rem-calc(10);
 
 // Off Canvas Divider Styles
-$tabbar-left-section-border: green; // ?????????
+// $tabbar-left-section-border: green; 
 // $tabbar-left-section-border: solid 1px scale-color($tabbar-bg, $lightness: -50%);
 // $tabbar-right-section-border: $tabbar-left-section-border;
 
@@ -1251,12 +1251,12 @@ $tabbar-left-section-border: green; // ?????????
 // We use this to control the definition
 // $sub-nav-font-family: $body-font-family;
 // $sub-nav-font-size: rem-calc(14);
-// $sub-nav-font-color: $aluminum;
+ $sub-nav-font-color: $aluminium;
 // $sub-nav-font-weight: $font-weight-normal;
 // $sub-nav-text-decoration: none;
 // $sub-nav-padding: rem-calc(3 16);
 // $sub-nav-border-radius: 3px;
-// $sub-nav-font-color-hover: scale-color($sub-nav-font-color, $lightness: -25%);
+ $sub-nav-font-color-hover: scale-color($sub-nav-font-color, $lightness: -25%);
 
 
 // We use these to control the active item styles
@@ -1418,10 +1418,12 @@ $tabbar-left-section-border: green; // ?????????
 // $topbar-title-font-size: rem-calc(17);
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: $white;
-// $topbar-link-color-hover: $white;
+// make the same as off-canvas menu TODO:
+ $topbar-link-color: $white;
+ $topbar-link-color-hover: $white;
+ $topbar-link-color-active-hover: $white;
+
 // $topbar-link-color-active: $white;
-// $topbar-link-color-active-hover: $white;
  $topbar-link-weight: $font-weight-normal;
  $topbar-link-font-size: rem-calc(18);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
@@ -1440,8 +1442,10 @@ $tabbar-left-section-border: green; // ?????????
 
 // Style the top bar dropdown elements
  $topbar-dropdown-bg: $topbar-bg;
-// $topbar-dropdown-link-color: $white;
-// $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
+
+ $topbar-dropdown-link-color: $aluminium;
+ $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
+
  $topbar-dropdown-link-bg: $topbar-bg;
  $topbar-dropdown-link-bg-hover: $topbar-bg;
 // $topbar-dropdown-link-weight: $font-weight-normal;

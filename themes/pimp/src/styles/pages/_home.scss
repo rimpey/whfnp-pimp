@@ -17,39 +17,46 @@
     }
 }
 
-.pnl-hero {
+.pnl-hero, #pnl-hero-colr-extend {
     background-color: $colr-pnl-hero;
     
     h1, h2, h3, h4 {
         color: $colr-txt;   
     }
 }
-.pnl-marketing {
+.pnl-marketing, #pnl-marketing-colr-extend {
     @extend .pnl-light-txt;
     background-color: $colr-pnl-marketing;
 }
-.pnl-causes {
+.pnl-causes, #pnl-causes-colr-extend {
     @extend .pnl-light-txt;
     background-color: $colr-pnl-causes;
 }
-.pnl-marketers {
-    @extend .pnl-light-txt;
+.pnl-marketers, #pnl-marketers-colr-extend {
     background-color: $colr-pnl-marketers;
+    @extend .pnl-light-txt;
 }
-.pnl-summary {
+.pnl-summary, #pnl-summary-colr-extend {
     @extend .pnl-dark-txt;
     background-color: $colr-pnl-summary;
 }
-.pnl-talkabout {
+.pnl-talkabout, #pnl-talkabout-colr-extend {
     @extend .pnl-light-txt;
     background-color: $colr-pnl-talkabout;
 }
-.pnl-contactus {
+.pnl-contactus, #pnl-contactus-colr-extend {
     @extend .pnl-dark-txt;
     background-color: $colr-pnl-contactus;
 }
-.pnl-signup {
+.pnl-signup, #pnl-signup-colr-extend {
     @extend .pnl-light-txt;
     background-color: $colr-pnl-signup;
+}
+
+.colr-extend-pink {
+    
+}
+.colr-extend-purple {
+    
 }
 
