@@ -1,50 +1,29 @@
-# Skeleton Project for Inclusion in October CMS Folder
+# Women Hack for Non Profit - Pimp My Cause Rebuild
 
-This is a skeleton project to be used with the October CMS. If you have not yet installed the October CMS please scroll down the page and follow the instructions outlined. As a result of installing the CMS you will have a directory on your local machine containing a full set of October CMS files, there is no need to upload these files to GitHub each time. In fact to guard against the overhead of GitHub stored CMS files these have been placed in the .gitignore file so that they are not uploaded to GitHub. The only files in the CMS for which will be modified during project development and stored in source control are those in the CMS themes and plugin directories.
+This is the website rebuild for Pimp My Cause built by a group of volunteers via Women Hack for Non Profits: Project Manager: Corinne Wichmann, Graphic Designer: Jeanette Clement, Front End Developers: Rhonda Impey and Lili Kastilio, Back End Developers: Tanya Powell, Tzhe'ela Trooper, Yana and Nandhini Narasimhan and Tester: Jean.
 
-The skeleton project is designed to work for both front and backend. Front end development will take place in the pimp themes directory:
+The front end technology stack used in this project includes pure HTML5, CSS3, JavaScript and includes the use of a front end framework called Zurb Foundation with built-in classes to style pages and JavaScript functionality.
 
-      [october-install-dir]/themes/pimp/src
+The project structure contains files in the 'scr' source directory that end up in the 'dist' distribution directory the resulting file structure is the static website ready for deployment and able to be put into a CMS of choice. 
 
-where best practices have been applied to the directory structure of this project including the Sass partials. The gruntfile.js watches for changes made in the this directory and will subsequently process files and output them up a directory and into: 
+This project is automated using the Grunt build tool running tasks based on file changes and tasks called. 
 
-      [october-install-dir]/themes/pimp/assets
+1. Pre-processing sass files into css files
+1. Post-processing css using JavaScript plugins providing fallback values for old browser compatibility
+1. Performing a type of serverside include for common page elements like header/footer/nav
+1. Minifying JavaScript files
+1. Syncronyzing page reloads across all browsers across all devices
 
-Where they form the static version of the site but are also in the correct location for being accessed by CMS pages. The gruntfile currently copies; scripts, styles and static html files into the assets directory however closer to project deployment will also uglify and compress files, this is yet to be done. The inclusion of the Zurb Foundation for Sass framework is also yet to be done. 
+The .gitignore a hidden file includes a list of files that will be ignored when pushing this project to git, a couple of cache directories and the node modules that are automatically installed as dependences in the project when you run the grunt file and thus do not need to be included in the git repository. 
 
-In its current form this skeleton project is ready to be integrated into your October CMS directory on your local machine. Once you have installed the October CMS all that is left to do is to checkout this project from GitHub. As you do not have an empty directory you will need to follow these git commands for cloning the repo into an existing installation of the October CMS.
+Most of the front end development work is done in the src directory where pages are stored in the /pages directory with partial pages in the /pages/includes directory. The /scripts/scripts.js file is a call to foundation and document ready the list of /scripts/vendors contain Foundation javascript files. 
 
-      git init
-      git remote add origin PATH/TO/REPO
-      git fetch
-      git reset --hard origin/master
+The directory structure of the /styles folder has been heavily researched and is according to best practices. In the /styles/main.scss file all other style files are imported according to correct ordering, with a reset performed first and variables declared, followed by vendor styling and then customised styling. Of particular note is the /styles/base/_settings.scss file this will be your best friend where you are over riding foundation styles look here before you create your own styles as there is likely to be a variable that assigned a value will override styling as desired throughout.
 
-The PATH/TO/REPO is the https url link located in GitHub and can be copied and pasted into the command line terminal.A
+The resulting static website can be viewed using GitHubs gh-pages added as an orphan branch containing files from the distribution file simply by running: 
 
-s yet this repo is simply the infrastracture of the pimp website and is in the process of being built so will eventually contain pages built statically for later inclusion in the October CMS.
-
-
-# Installation wizard for October
-
-The wizard installation is a recommended way to install October. It is simpler than the command-line installation and doesn't require any special skills.
-
-1. Prepare a directory on your server that is empty. It can be a sub-directory, domain root or a sub-domain.
-1. [Download the installer archive file](https://github.com/octobercms/install/archive/master.zip).
-1. Unpack the installer archive to the prepared directory.
-1. Grant writing permissions on the installation directory and all its subdirectories and files.
-1. Navigate to the install.php script in your web browser.
-1. Follow the installation instructions.
-
-## Minimum System Requirements
-
-October CMS has a few system requirements:
-
-* PHP 5.4 or higher
-* PDO PHP Extension
-* cURL PHP Extension
-* MCrypt PHP Extension
-* ZipArchive PHP Library
-* GD PHP Library
-
-As of PHP 5.5, some OS distributions may require you to manually install the PHP JSON extension.
-When using Ubuntu, this can be done via ``apt-get install php5-json``.
+    http://username.github.io/repository/branch 
+    
+for example 
+    
+    http://womenhackfornonprofits.github.io/pimpmycause-rebuild/development-pimp 

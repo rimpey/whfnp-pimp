@@ -6,21 +6,7 @@
 .ssi-cache/
 node_modules/
 
-### OCTOBER CMS ###
-.htaccess
-artisan
-bootstrap/
-config/
-!config/cms.php
-index.php
-install.php
-install_files/
-modules/
-!plugins/
-plugins/*
-!plugins/pimp/
-storage/
-!themes/
-themes/*
-!themes/pimp/
-vendor/
+### DIST ###
+dist/*.html
+dist/scripts/
+dist/styles/
