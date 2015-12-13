@@ -8,3 +8,6 @@ node_modules/
 
 ### DIST ###
 dist/
+
+### GH-PAGES TMP FILE ###
+src/.grunt
