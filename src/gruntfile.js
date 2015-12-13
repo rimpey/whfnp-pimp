@@ -4,19 +4,33 @@ module.exports = function(grunt) {
 	
 	grunt.initConfig({
         
-//        pkg: grunt.file.readJSON('package.json'),
+		pkg: require('./package.json'),
+		meta: {
+			banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+			'<%= grunt.template.today("yyyy-mm-dd") %> */'
+		},
 
+        // Grunt clean will delete the contents of the dist/ directory before we start a new build
+        
+        clean: {
+            build: ['../dist'],
+            options: {
+                force: true
+            }
+        },
+        
+        
 		// Grunt will watch for file changes
         // Sass files changed in the styles folder/sub-dir will call the ['sass'] task
         // Include pages changed will call the ['ssi'] task - Server Side Includes
 		
 		watch: {
 			watch_sass: {
-				files: "styles/**/*.scss",
+				files: 'styles/**/*.scss',
 				tasks: ['sass', 'postcss']
 			},
             watch_ssi: {
-                files: "pages/**/*.html",
+                files: 'pages/**/*.html',
                 tasks: ['ssi']
             },
             watch_js: {
@@ -31,9 +45,18 @@ module.exports = function(grunt) {
 			dev: {
 				files: {
 					//destination            //source file
-					"../dist/styles/styles.css" : "styles/main.scss"
+					'../dist/styles/styles.css' : 'styles/main.scss'
 				}
-			}
+			},
+            deploy: { 
+                options: {
+                    style: 'compressed'
+                },
+                files: {
+                    //destination          //source file
+                    '../dist/styles/styles.css' : 'styles/main.scss'
+                }
+            }
 		},
         
         // Grunt uses a type of serverside include for common page elements like header/footer/nav
@@ -83,21 +106,39 @@ module.exports = function(grunt) {
 				src: '../dist/styles/styles.css'
 			}
 		},
-
-
-		// Config for grunt-contrib-uglify (javascript concatenation)
+        
+        // concatenate javascript files for development
+        
+        concat: {
+            options: {
+              separator: ';',
+            },
+            dist: {
+              src: [
+                    'scripts/vendors/jquery.js',
+                    'scripts/vendors/fastclick.js',
+                    'scripts/vendors/jquery.cookie.js',
+                    'scripts/vendors/jquery.placeholder.js',
+                    'scripts/vendors/foundation.js',
+                    'scripts/scripts.js'
+              ],
+              dest: '../dist/scripts/scripts.js',
+            },
+      },
+        
+		// compress javascript files for deployment
 
 		uglify: {
 			options: {
 				beautify: false,
 				sourceMap: true,
 				sourceMapIncludeSources: true,
-				sourceMapName: '../dist/scripts/scripts.js.map'
+                sourceMapName: '../dist/scripts/scripts.map'                
 			},
 			main: {
 				files: {
-					'../dist/scripts/scripts.js': [
-//						'scripts/**/*.js'
+                    '../dist/scripts/scripts.js': [
+						// 'scripts/**/*.js'
                         'scripts/vendors/jquery.js',
                         'scripts/vendors/fastclick.js',
                         'scripts/vendors/jquery.cookie.js',
@@ -118,33 +159,72 @@ module.exports = function(grunt) {
 			default_options: {
 				bsFiles: {
 					src: [
-						"../dist/styles/*.css",
-						"../dist/*.html",
-                        "../dist/scripts/*.js"
+						'../dist/styles/*.css',
+						'../dist/*.html',
+                        '../dist/scripts/*.js'
 					]
 				},
 				options: {
 					watchTask: true,
 					server: {
-						baseDir: "../dist"
+						baseDir: '../dist'
 					}
 				}
 			}
-		}
+		},
+        
+        
+        // Minify images in production
+        
+         imagemin: {
+              dist: {
+                options: {
+                  optimizationLevel: 3
+                },
+                files: [
+                  {
+                    expand: true,
+                    cwd: 'img/',
+                    src: ['*.{png,jpg,gif}'],
+                    dest: '../dist/img'
+                  }
+                ]
+              }
+        },
+        
+        
+        // GitHub pages generates a live site from a git repo
+        // Running this task with grunt will create a temporary clone of the current repository, 
+        // create a gh-pages branch if one doesn't already exist, copy over all files from the 
+        // dist directory that match patterns from thesrc configuration, commit all changes, 
+        // and push to the origin remote.
+        
+        'gh-pages': {
+            options: {
+                base: '../dist'
+            },
+            src: ['**']
+          }
 
 	});
 
     // Dependent plug-ins
     
+    grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-ssi');
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-gh-pages');
 
     // include call to sass/ssi separately for first time run thereafter called via watch
-	grunt.registerTask('default', ['sass', 'ssi', 'postcss', 'uglify', 'browserSync', 'watch']);
+	grunt.registerTask('default', ['clean', 'sass:dev', 'ssi', 'postcss', 'concat', 'imagemin', 'browserSync', 'watch']);
+    // run grunt deploy for a distribution ready product
+    grunt.registerTask('deploy', ['clean', 'sass:deploy', 'ssi', 'postcss', 'uglify', 'imagemin', 'gh-pages']);
 
 };
 

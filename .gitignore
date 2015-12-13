@@ -7,6 +7,4 @@
 node_modules/
 
 ### DIST ###
-dist/*.html
-dist/scripts/
-dist/styles/
+dist/
