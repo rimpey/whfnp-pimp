@@ -22,8 +22,8 @@ The directory structure of the /styles folder has been heavily researched and is
 
 The resulting static website can be viewed using GitHubs gh-pages added as an orphan branch containing files from the distribution file simply by running: 
 
-    http://username.github.io/repository/branch 
+    http://username.github.io/repository/
     
 for example 
     
-    http://womenhackfornonprofits.github.io/pimpmycause-rebuild/development-pimp 
+    http://womenhackfornonprofits.github.io/pimpmycause-rebuild/
