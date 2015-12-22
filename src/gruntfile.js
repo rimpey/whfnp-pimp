@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 		watch: {
 			watch_sass: {
 				files: 'styles/**/*.scss',
-				tasks: ['sass', 'postcss']
+				tasks: ['sass:dev', 'postcss']
 			},
             watch_ssi: {
                 files: 'pages/**/*.html',
@@ -119,6 +119,7 @@ module.exports = function(grunt) {
                     'scripts/vendors/fastclick.js',
                     'scripts/vendors/jquery.cookie.js',
                     'scripts/vendors/jquery.placeholder.js',
+                    'scripts/vendors/jquery.easing.js',
                     'scripts/vendors/foundation.js',
                     'scripts/scripts.js'
               ],
@@ -143,6 +144,7 @@ module.exports = function(grunt) {
                         'scripts/vendors/fastclick.js',
                         'scripts/vendors/jquery.cookie.js',
                         'scripts/vendors/jquery.placeholder.js',
+                        'scripts/vendors/jquery.easing.js',
                         'scripts/vendors/foundation.js',
                         'scripts/scripts.js'
 					]
@@ -202,6 +204,7 @@ module.exports = function(grunt) {
         'gh-pages': {
             options: {
                 base: '../dist'
+                // repo: 'https://github.com/rimpey/whfnp-pimp.git'
             },
             src: ['**']
           }
@@ -222,7 +225,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-gh-pages');
 
     // include call to sass/ssi separately for first time run thereafter called via watch
-	grunt.registerTask('default', ['clean', 'sass:dev', 'ssi', 'postcss', 'concat', 'imagemin', 'browserSync', 'watch']);
+	grunt.registerTask('default', ['sass:dev', 'ssi', 'postcss', 'concat', 'imagemin', 'browserSync', 'watch']);
     // run grunt deploy for a distribution ready product
     grunt.registerTask('deploy', ['clean', 'sass:deploy', 'ssi', 'postcss', 'uglify', 'imagemin', 'gh-pages']);
 

@@ -2,6 +2,28 @@
    PAGES / HOME 
    ================================= */
 
+$triangle-border-left: rem-calc(38);
+$triangle-border-right: rem-calc(38);
+$triangle-border-bottom: rem-calc(38);
+$triangle-pos-top: -$triangle-border-bottom;
+
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: $triangle-border-left solid transparent;
+    border-right: $triangle-border-right solid transparent;
+    top: $triangle-pos-top + rem-calc(1); // overlap of 1px as chrome inconsistently leaves a 1px gap between pnl and triangle
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 20;
+}
+
+.pnl {
+    // fixed height temporary
+    padding-bottom: rem-calc(38);
+}
+
 .pnl-light-txt {
     
     h1, h2, h3, h4, p {
@@ -17,46 +39,91 @@
     }
 }
 
-.pnl-hero, #pnl-hero-colr-extend {
+.pnl-hero, #pnl-hero-colr-to-edge {
     background-color: $colr-pnl-hero;
     
     h1, h2, h3, h4 {
         color: $colr-txt;   
     }
 }
-.pnl-marketing, #pnl-marketing-colr-extend {
+.pnl-marketing, #pnl-marketing-colr-to-edge {
+    @extend .pnl;
     @extend .pnl-light-txt;
     background-color: $colr-pnl-marketing;
+    position: relative;
+
+    &:before {
+        @extend .triangle-up;
+        border-bottom: $triangle-border-bottom solid $colr-pnl-marketing;
+    }
 }
-.pnl-causes, #pnl-causes-colr-extend {
+.pnl-causes, #pnl-causes-colr-to-edge {
+    @extend .pnl;
     @extend .pnl-light-txt;
     background-color: $colr-pnl-causes;
+    position: relative;
+    
+    &:before {
+        @extend .triangle-up;
+        border-bottom: $triangle-border-bottom solid $colr-pnl-causes;
+    }
 }
-.pnl-marketers, #pnl-marketers-colr-extend {
-    background-color: $colr-pnl-marketers;
+.pnl-marketers, #pnl-marketers-colr-to-edge {
+    @extend .pnl;
     @extend .pnl-light-txt;
+    background-color: $colr-pnl-marketers;
+    position: relative;
+    
+    &:before {
+        @extend .triangle-up;
+        border-bottom: $triangle-border-bottom solid $colr-pnl-marketers;
+    }
 }
-.pnl-summary, #pnl-summary-colr-extend {
+.pnl-summary, #pnl-summary-colr-to-edge {
+    @extend .pnl;
     @extend .pnl-dark-txt;
     background-color: $colr-pnl-summary;
+    position: relative;
+ 
+    &:before {
+        @extend .triangle-up;
+        border-bottom: $triangle-border-bottom solid $colr-pnl-summary;
+    }  
 }
-.pnl-talkabout, #pnl-talkabout-colr-extend {
+.pnl-talkabout, #pnl-talkabout-colr-to-edge {
+    @extend .pnl;
     @extend .pnl-light-txt;
     background-color: $colr-pnl-talkabout;
+    position: relative;
+ 
+    &:before {
+        @extend .triangle-up;
+        border-bottom: $triangle-border-bottom solid $colr-pnl-talkabout;
+    }  
 }
-.pnl-contactus, #pnl-contactus-colr-extend {
+.pnl-contactus, #pnl-contactus-colr-to-edge {
+    @extend .pnl;
     @extend .pnl-dark-txt;
     background-color: $colr-pnl-contactus;
+    position: relative;
+    
+    &:before {
+        @extend .triangle-up;
+        border-bottom: $triangle-border-bottom solid $colr-pnl-contactus;
+    }    
 }
-.pnl-signup, #pnl-signup-colr-extend {
+.pnl-signup, #pnl-signup-colr-to-edge {
+    @extend .pnl;
     @extend .pnl-light-txt;
     background-color: $colr-pnl-signup;
+    position: relative;
+    
+    &:before {
+        @extend .triangle-up;
+        border-bottom: $triangle-border-bottom solid $colr-pnl-signup;
+    }    
 }
 
-.colr-extend-pink {
-    
-}
-.colr-extend-purple {
-    
-}
+
+
 

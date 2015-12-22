@@ -7,9 +7,13 @@
         
         <!--#include virtual="includes/header.html" -->
         
+        <!-- ********** -->
+        <!-- HERO PANEL -->
+        <!-- ********** -->
         
-        <!-- Panel Hero -->
-        <div id="pnl-hero-colr-extend">
+        <!-- LHS: Hero Panel - Register -->
+        
+        <div id="pnl-hero-colr-to-edge">
             <div class="row pnl-hero">
                 <div class="large-6 columns">
                     <h2>Join for free</h2>
@@ -50,78 +54,75 @@
                             </select>
                         </div> <!-- end large-5 columns -->
                     </div> <!-- end row -->
+                </div> <!-- end large-6 columns -->
+                
+                
+                <!-- RHS: Hero Panel - 3D Flip Tiles -->
+                
+                <div class="large-6 columns" id="tile-box">
 
-    <!--
-                    <div class="row">
-                        <div class="large-4 columns header-sign-in">
-                            <a href="#" class="button round">Continue</a>
-                        </div>
-                    </div>
-    -->
-
-                </div>
-                <div class="large-6 columns">
-
-    <!--
-                    <ul class="medium-block-grid-2">
-                        <li><img src="img/tile1-marketer-pic.png" alt="Image of Marketer"></li>
-                        <li><img src="img/tile2-story-pic.png" alt="Image of Story"></li>
-                        <li><img src="img/tile3-news-pic.png" alt="Image of News"></li>
-                        <li><img src="img/tile4-cause-pic.png" alt="Image of Cause"></li>
-                    </ul>
-    -->
-    <!--
-                    <div class="row">
-                        <div class="small-6 columns">
-                            <img src="img/tile1-marketer-pic.png" alt="Image of Marketer">
-                        </div>
-                        <div class="small-6 columns">
-                            <img src="img/tile2-story-pic.png" alt="Image of Story">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="small-6 columns">
-                            <img src="img/tile3-news-pic.png" alt="Image of News">
-                        </div>
-                        <div class="small-6 columns">
-                            <img src="img/tile4-cause-pic.png" alt="Image of Cause">
-                        </div>
-                    </div>
-    -->
                     <div class="tile-row">
+                        
+                        <!-- TILE top left - Marketer-->
                         <div class="tile-wrapper">
                             <div class="tile">
-                                <img src="img/tile1-marketer-pic.png" alt="Image of Marketer">
+                                <img class="front" src="img/tile1-marketer-pic.png" alt="Image of Marketer">
+                                <div class="tile-svg-txt back">
+                                    <img src="img/tile1-marketer-icon.png" alt="Logo for Marketer"> 
+                                    <h3>FIND A MARKETER</h3>
+                                </div>
                             </div>                  
                         </div> 
+                        
+                        <!-- TILE top right - Story -->
                         <div class="tile-wrapper">
                             <div class="tile">
-                                <img src="img/tile2-story-pic.png" alt="Image of Story">
+                                <img class="back" src="img/tile2-story-pic.png" alt="Image of Story">
+                                <div class="tile-svg-txt front">
+                                    <img src="img/tile2-story-icon.png" alt="Image of Story">
+                                    <h3>OUR STORY</h3>
+                                </div>
                             </div>                  
-                        </div>
-                    </div>
+                        </div> 
+                        
+                    </div> <!-- end tile-row - top row -->
 
                     <div class="tile-row">
+                        
+                        <!-- TILE bottom left - News -->
                         <div class="tile-wrapper">
                             <div class="tile">
-                                <img src="img/tile3-news-pic.png" alt="Image of News">
+                                <img class="back" src="img/tile3-news-pic.png" alt="Image of News">
+                                <div class="tile-svg-txt front">
+                                    <img src="img/tile3-news-icon.png" alt="Image of Story">
+                                    <h3>NEWS</h3>
+                                </div>
                             </div>
                         </div>
+                        
+                        <!-- TILE bottom right - Cause -->
                         <div class="tile-wrapper">
                             <div class="tile">
-                                <img src="img/tile4-cause-pic.png" alt="Image of Cause">
+                                <img class="front" src="img/tile4-cause-pic.png" alt="Image of Cause">
+                                <div class="tile-svg-txt back">
+                                    <img src="img/tile4-cause-icon.png" alt="Image of Story">
+                                    <h3>FIND A CAUSE</h3>
+                                </div>   
                             </div>                   
                         </div>
-                    </div>
-
-
-
-                </div>
+                        
+                    </div> <!-- end tile-row - bottom row -->
+                </div><!-- end large-6 columns #tile-box -->
+                
             </div> <!-- end row pnl-hero -->
         </div> <!-- end colr-extend-purple -- >
 
-        <!-- Panel Marketing -->
-        <div id="pnl-marketing-colr-extend">
+
+        <!-- *************** -->
+        <!-- MARKETING PANEL -->
+        <!-- *************** -->
+
+        <div id="pnl-marketing-colr-to-edge">
              <div class="row pnl-marketing">
                 <div class="large-12 columns">
                     <h1>Marketing a better world</h1>
@@ -130,10 +131,13 @@
                 </div>
             </div> <!-- end row pnl-marketing -->     
         </div> <!-- end pnl-marketing-colr-extend -->
-
         
-        <!-- Panel Featured Causes -->
-        <div id="pnl-causes-colr-extend">
+
+        <!-- ********************* -->
+        <!-- FEATURED CAUSES PANEL -->
+        <!-- ********************* -->
+        
+        <div id="pnl-causes-colr-to-edge">
              <div class="row pnl-causes">
                 <div class="large-12 columns">
                     <h1>Featured Causes</h1>
@@ -142,8 +146,11 @@
         </div> <!-- end pnl-causes-colr-extend -->
 
         
-        <!-- Panel Featured Marketers -->
-        <div id="pnl-marketers-colr-extend">
+        <!-- *************** -->
+        <!-- MARKETERS PANEL -->
+        <!-- *************** -->
+
+        <div id="pnl-marketers-colr-to-edge">
              <div class="row pnl-marketers">
                 <div class="large-12 columns">
                     <h1>Featured Marketers</h1>
@@ -152,8 +159,11 @@
         </div> <!-- end pnl-marketers-colr-extend -->
 
         
-        <!-- Panel Summary - Have You Seen -->
-        <div id="pnl-summary-colr-extend">
+        <!-- ******************************* -->
+        <!-- SUMMARY - HAVE YOU SEEN - PANEL -->
+        <!-- ******************************* -->
+
+        <div id="pnl-summary-colr-to-edge">
              <div class="row pnl-summary">
                 <div class="large-12 columns">
                     <h1>Have You Seen</h1>
@@ -162,8 +172,11 @@
         </div> <!-- end pnl-summary-colr-extend -->
 
         
-        <!-- Panel Talk About -->
-        <div id="pnl-talkabout-colr-extend">
+        <!-- **************** -->
+        <!-- TALK ABOUT PANEL -->
+        <!-- **************** -->
+
+        <div id="pnl-talkabout-colr-to-edge">
             <div class="row pnl-talkabout">
                 <div class="large-12 columns">
                     <h1>What we're talking about</h1>
@@ -172,8 +185,11 @@
         </div> <!-- end pnl-talkabout-colr-extend -->
 
         
-        <!-- Panel Contact Us -->
-        <div id="pnl-contactus-colr-extend">
+        <!-- **************** -->
+        <!-- CONTACT US PANEL -->
+        <!-- **************** -->
+        
+        <div id="pnl-contactus-colr-to-edge">
              <div class="row pnl-contactus">
                 <div class="large-12 columns">
                     <h1>Contact Us</h1>
@@ -182,8 +198,11 @@
         </div> <!-- end pnl-contactus-colr-extend -->
 
         
-        <!-- Panel Sign up -->
-        <div id="pnl-signup-colr-extend">
+        <!-- ************* -->
+        <!-- SIGN UP PANEL -->
+        <!-- ************* -->
+        
+        <div id="pnl-signup-colr-to-edge">
             <div class="row pnl-signup">
                 <div class="large-12 columns">
                     <h1>Sign-up to our newsletter</h1>

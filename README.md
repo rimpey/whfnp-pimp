@@ -1,6 +1,6 @@
 # Women Hack for Non Profit - Pimp My Cause Rebuild
 
-This is the website rebuild for Pimp My Cause built by a group of volunteers via Women Hack for Non Profits: Project Manager: Corinne Wichmann, Graphic Designer: Jeanette Clement, Front End Developers: Rhonda Impey and Lili Kastilio, Back End Developers: Tanya Powell, Tzhe'ela Trooper, Yana and Nandhini Narasimhan and Tester: Jean.
+This is the website rebuild for Pimp My Cause built by a group of volunteers via Women Hack for Non Profits: Project Manager: Corinne Wichmann, Graphic Designer: Jeanette Clement, Front End Developers: Rhonda Impey and Lili Kastilio, Back End Developers: Tanya Powell, Tzhe'ela Trooper, Yana Bar and Nandhini Narasimhan and Tester: Jean Jimbo.
 
 The front end technology stack used in this project includes pure HTML5, CSS3, JavaScript and includes the use of a front end framework called Zurb Foundation with built-in classes to style pages and JavaScript functionality.
 

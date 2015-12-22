@@ -3,6 +3,11 @@
    ================================= */
 
 // tile row to be the same height as it's children
+
+.row .columns#tile-box {
+    padding: 0;
+}
+
 .tile-row {
     overflow: hidden;
 }
@@ -12,19 +17,88 @@
     height: 0;
     padding-top: 50%;
     float: left;
-    background: green;
     position: relative;
+    perspective: 800px; 
 }
 
 .tile {
     width: 100%;
     height: 100%;
-    position: absolute;
     top: 0;
     left: 0;
-    overflow: hidden;
+    position: absolute;
+    overflow: hidden; 
     
-    img {
+    > img {
+        position: absolute;
+        top: 0;
+        left: 0;
         height: 100%;
     }
 }
+
+.tile-svg-txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $mustard;
+    
+    img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 5%;
+        height: 60%;
+        
+    }
+    
+    h3 {
+        color: $colr-txt-accent !important;  
+        font-weight: 600;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+}
+
+
+// ****************
+// TILE TRANSITIONS
+// ****************
+
+.front, .back {
+    backface-visibility: hidden;
+    transition-duration: 0.3s;
+//    transform-style: preserve-3d; 
+}
+
+// front pane placed above back
+.front {
+    z-index: 2;
+    // for firefox 31
+    transform: rotateY(0deg);
+    
+    .the-flip & {
+        z-index: 0;
+        transform: rotateY(180deg);
+    }
+}
+
+// back initially hidden pane
+.back {
+    z-index: 0;
+    transform: rotateY(180deg);
+    
+    .the-flip & {
+        z-index: 2;
+        transform: rotateY(360deg);
+    }
+}
+
+
+
+
