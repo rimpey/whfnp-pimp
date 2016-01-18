@@ -20,8 +20,15 @@ $triangle-pos-top: -$triangle-border-bottom;
 }
 
 .pnl {
-    // fixed height temporary
-    padding-bottom: rem-calc(38);
+    // padding-top: rem-calc(65); not able to add padding to top as colours over before arrow up
+    padding-bottom: rem-calc(40);
+    // increase z-index so that cube rotate doesn't separate triangle from panel
+    z-index: 12;
+}
+
+.pnl-title {
+    padding-top: rem-calc(50);
+    padding-bottom: rem-calc(20);
 }
 
 .pnl-light-txt {
@@ -39,13 +46,46 @@ $triangle-pos-top: -$triangle-border-bottom;
     }
 }
 
+
+// ********** 
+// HERO PANEL 
+// ********** 
+
 .pnl-hero, #pnl-hero-colr-to-edge {
     background-color: $colr-pnl-hero;
     
     h1, h2, h3, h4 {
         color: $colr-txt;   
     }
+    
+    select {
+        option {
+            font-size: rem-calc(25) !important;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+    }
 }
+.h2-hero {
+    padding-top: rem-calc(50);   
+}
+.h4-hero {
+    padding-top: rem-calc(15);
+}
+.hero-continue {
+    
+    .button {
+        padding: 0.5rem 1.75rem 0.8125rem 1.75rem; 
+        width: 12rem;
+        font-size: rem-calc(24);
+        background-color: $purple;
+    }
+}
+
+// *************** 
+// MARKETING PANEL 
+// *************** 
+
 .pnl-marketing, #pnl-marketing-colr-to-edge {
     @extend .pnl;
     @extend .pnl-light-txt;
@@ -57,6 +97,11 @@ $triangle-pos-top: -$triangle-border-bottom;
         border-bottom: $triangle-border-bottom solid $colr-pnl-marketing;
     }
 }
+
+// *************** 
+// CAUSES PANEL 
+// *************** 
+
 .pnl-causes, #pnl-causes-colr-to-edge {
     @extend .pnl;
     @extend .pnl-light-txt;
@@ -68,6 +113,11 @@ $triangle-pos-top: -$triangle-border-bottom;
         border-bottom: $triangle-border-bottom solid $colr-pnl-causes;
     }
 }
+
+// *************** 
+// MARKETERS PANEL 
+// *************** 
+
 .pnl-marketers, #pnl-marketers-colr-to-edge {
     @extend .pnl;
     @extend .pnl-light-txt;
@@ -79,6 +129,11 @@ $triangle-pos-top: -$triangle-border-bottom;
         border-bottom: $triangle-border-bottom solid $colr-pnl-marketers;
     }
 }
+
+// *************** 
+// SUMMARY PANEL 
+// *************** 
+
 .pnl-summary, #pnl-summary-colr-to-edge {
     @extend .pnl;
     @extend .pnl-dark-txt;
@@ -90,6 +145,11 @@ $triangle-pos-top: -$triangle-border-bottom;
         border-bottom: $triangle-border-bottom solid $colr-pnl-summary;
     }  
 }
+
+// *************** 
+// TALKABOUT PANEL 
+// *************** 
+
 .pnl-talkabout, #pnl-talkabout-colr-to-edge {
     @extend .pnl;
     @extend .pnl-light-txt;
@@ -101,6 +161,11 @@ $triangle-pos-top: -$triangle-border-bottom;
         border-bottom: $triangle-border-bottom solid $colr-pnl-talkabout;
     }  
 }
+
+// ****************
+// CONTACT US PANEL 
+// ****************
+
 .pnl-contactus, #pnl-contactus-colr-to-edge {
     @extend .pnl;
     @extend .pnl-dark-txt;
@@ -112,6 +177,11 @@ $triangle-pos-top: -$triangle-border-bottom;
         border-bottom: $triangle-border-bottom solid $colr-pnl-contactus;
     }    
 }
+
+// *************** 
+// SIGN UP PANEL 
+// *************** 
+
 .pnl-signup, #pnl-signup-colr-to-edge {
     @extend .pnl;
     @extend .pnl-light-txt;
