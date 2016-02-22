@@ -82,6 +82,18 @@ $triangle-pos-top: -$triangle-border-bottom;
     }
 }
 
+//**************** TEST 
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    z-index: 25;
+    border: 5px solid black;
+    text-align: center;
+    
+}
+
 // *************** 
 // MARKETING PANEL 
 // *************** 
@@ -134,6 +146,9 @@ $triangle-pos-top: -$triangle-border-bottom;
 // SUMMARY PANEL 
 // *************** 
 
+$summary-title-height: rem-calc(55);
+$summary-info-height: rem-calc(137);
+
 .pnl-summary, #pnl-summary-colr-to-edge {
     @extend .pnl;
     @extend .pnl-dark-txt;
@@ -144,6 +159,45 @@ $triangle-pos-top: -$triangle-border-bottom;
         @extend .triangle-up;
         border-bottom: $triangle-border-bottom solid $colr-pnl-summary;
     }  
+}
+
+ul li {
+    
+    position: relative;
+//    overflow: hidden;
+    padding-bottom: 0;
+    margin: 0 rem-calc(10);
+    
+    .summary-title, .summary-info {
+        position: absolute;
+        width: calc(100% - 20px);
+        bottom: 0;
+        left: 0;
+        margin: 0 10px;
+        
+        background-color: $overlay;
+        text-align: center;
+        vertical-align: middle;
+        text-size: rem-calc(20);
+        color: $purple;
+        z-index: 20;
+    }
+    .summary-title {
+        padding: 10px;    
+
+    }
+    .summary-info {
+        transform: translateY(0);
+//        display: none;
+//        visibility: hidden;
+    }
+    
+    &:hover .summary-info {
+        padding-bottom: 50px;
+        transform: translateY(100%);
+        transition: transform .5s;
+//        visibility: visible;
+    }
 }
 
 // *************** 

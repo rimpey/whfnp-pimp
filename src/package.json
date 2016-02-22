@@ -1,6 +1,6 @@
 {
   "name": "pimp",
-  "version": "1.2",
+  "version": "1.0.0",
   "description": "This is a clean version of the Pimp project a sandbox to put into the actual Pimp repository",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-gh-pages": "^1.0.0",
     "grunt-postcss": "^0.7.1",
+    "grunt-sass": "^1.1.0",
     "grunt-ssi": "^0.2.1",
     "pixrem": "^3.0.0",
     "rucksack-css": "^0.8.5"

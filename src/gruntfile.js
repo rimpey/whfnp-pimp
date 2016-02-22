@@ -36,6 +36,10 @@ module.exports = function(grunt) {
             watch_js: {
 				files: ['scripts/**/*.js'],
 				tasks: ['uglify']
+			},
+            watch_img: {
+				files: ['img/**/*'],
+				tasks: ['imagemin']
 			}
 		},
         
@@ -121,6 +125,7 @@ module.exports = function(grunt) {
                     'scripts/vendors/jquery.placeholder.js',
                     'scripts/vendors/jquery.easing.js',
                     'scripts/vendors/foundation.js',
+                    'scripts/vendors/velocity.js',
                     'scripts/scripts.js'
               ],
               dest: '../dist/scripts/scripts.js',
@@ -146,6 +151,7 @@ module.exports = function(grunt) {
                         'scripts/vendors/jquery.placeholder.js',
                         'scripts/vendors/jquery.easing.js',
                         'scripts/vendors/foundation.js',
+                        'scripts/vendors/velocity.js',
                         'scripts/scripts.js'
 					]
 				}
