@@ -2,9 +2,14 @@ $(document).foundation();
 
 $(window).on("load", function() {
     
-    // rotating the cubes on the front hero panel using a timer
     
-    var x = true;
+//  ********** 
+//  HERO PANEL 
+//  ********** 
+    
+//  rotating the cubes on the front hero panel using a timer
+    
+    var loop_condition = true;
     
     var topLeft = $(".cube").eq(0);
     var topRight = $(".cube").eq(1);
@@ -13,18 +18,102 @@ $(window).on("load", function() {
     
     setInterval(function () {
         
-        if (x) {
+        if (loop_condition) {
             topLeft.toggleClass("active");
             bottomRight.toggleClass("active");
         } else {
             topRight.toggleClass("active");
             bottomLeft.toggleClass("active");
         }
-        x = !x;
+        loop_condition = !loop_condition;
 
     }, 2000);
     
+    
+//  ******************************* 
+//  SUMMARY - HAVE YOU SEEN - PANEL 
+//  ******************************* 
+    
+//  toggle click-event class to element to perform slide up functionality displaying summary info on click
+      
+    $('.summary-title').on('click', function () {
+        $(this).toggleClass('click-event');
+    });
+    
+
+//  *******************************
+//  FEATURED CAUSES/MARKETERS PANEL 
+//  ******************************* 
+        
+// Fade Responsive Slider
+    
+    $('.fade').slick({
+      arrows: false,
+      dots: true,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear'
+    });
+    
 });
+    
+    
+    // Summary Panel - change colour on hover title to image colour - sibling prev
+//    $("#child").height($("#parent").height());
+//    $('.post').css('min-height', $('.entry-meta').outerHeight());
+//    $( "td:eq( 2 )" ).css( "color", "red" );
+//    $(this).siblings(".bar").eq(0).text();
+    
+//    // Colour Values
+//    var $purple = '#3b1d4a';
+//    // 59 29 74
+//    var $pink = '#dc0e54';
+//    // 220 14 84
+//    var $green = '#809b29';
+//    // 128 155 41
+//    var $mustard = '#d7be01';
+//    // 215 190 1
+//    var $overlay = '#f2f4f5';
+//    // 242 244 245
+    
+    // NOTE: this code worked in achieving the slide up summary-info however did not include the
+    // colour change of the :before triangle.. wasn't sure how to get a psuedo element...
+    
+    
+    // set background colour of Summary panels to then change the title accordingly
+//    $('.summary-img:eq(0)').css('background-color', $pink);
+//    $('.summary-img:eq(1)').css('background-color', $purple);
+//    $('.summary-img:eq(2)').css('background-color', $green);
+//    $('.summary-img:eq(3)').css('background-color', $mustard);
+//    $('.summary-title').on('click', function () {
+//        $(this).toggleClass('click-event');
+//    })
+//    $('.summary-title').on('click hover', 
+//      $('.summary-title').hover(
+//                             
+//        function(){
+//            // save current obj 'title' as with slide up event 'summary-info' becomes new current obj - hook is lost
+////            var current_obj = $(this);
+//            // mouse in title becomes same colour as summary tile background
+//            var colour = $(this).prev().css('background-color');
+//        
+//        console.log(colour);
+//        
+//        
+//            $(this).css('background-color', colour);
+//            
+//        }, function() {
+//            // mouse out title becomes same established neutral overlay colour
+//            $(this).css('background-color', $overlay);   
+//        }
+//    );
+        
+//    $(#foo).click(change() {
+//        $(body).css("background-color":"blue");
+//    });
+    
+//});
 
 //$(document).ready(function() {
     

@@ -126,6 +126,7 @@ module.exports = function(grunt) {
                     'scripts/vendors/jquery.easing.js',
                     'scripts/vendors/foundation.js',
                     'scripts/vendors/velocity.js',
+                    'scripts/vendors/slick.js',
                     'scripts/scripts.js'
               ],
               dest: '../dist/scripts/scripts.js',
@@ -152,6 +153,7 @@ module.exports = function(grunt) {
                         'scripts/vendors/jquery.easing.js',
                         'scripts/vendors/foundation.js',
                         'scripts/vendors/velocity.js',
+                        'scripts/vendors/slick.js',
                         'scripts/scripts.js'
 					]
 				}
@@ -201,6 +203,22 @@ module.exports = function(grunt) {
         },
         
         
+        // Copy fonts to distribution directory
+        
+        copy: {
+            fonts: {
+                files: [
+                  {
+                    expand: true,
+                    cwd: 'fonts/',
+                    src: ['**'],
+                    dest: '../dist/fonts'
+                  }
+                ]    
+            }
+        },
+        
+        
         // GitHub pages generates a live site from a git repo
         // Running this task with grunt will create a temporary clone of the current repository, 
         // create a gh-pages branch if one doesn't already exist, copy over all files from the 
@@ -209,18 +227,18 @@ module.exports = function(grunt) {
         
         'gh-pages': {
             options: {
-                base: '../dist'
-                // repo: 'https://github.com/rimpey/whfnp-pimp.git'
+                base: '../dist',
+                repo: 'https://github.com/rimpey/whfnp-pimp.git'
             },
             src: ['**']
-          }
+        }
 
 	});
 
     // Dependent plug-ins
     
     grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-ssi');
@@ -228,12 +246,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-gh-pages');
 
+
     // include call to sass/ssi separately for first time run thereafter called via watch
-	grunt.registerTask('default', ['sass:dev', 'ssi', 'postcss', 'concat', 'imagemin', 'browserSync', 'watch']);
+	grunt.registerTask('default', ['sass:dev', 'ssi', 'postcss', 'concat', 'imagemin', 'copy:fonts', 'browserSync', 'watch']);
     // run grunt deploy for a distribution ready product
-    grunt.registerTask('deploy', ['clean', 'sass:deploy', 'ssi', 'postcss', 'uglify', 'imagemin', 'gh-pages']);
+    grunt.registerTask('deploy', ['clean', 'sass:deploy', 'ssi', 'postcss', 'uglify', 'imagemin', 'copy:fonts', 'gh-pages']);
 
 };
 

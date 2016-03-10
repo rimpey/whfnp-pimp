@@ -1,3 +1,46 @@
 /* =================================
    LAYOUT / FORMS
    ================================= */
+
+/* This is Lili's styling code for the contact and register panels */
+
+#sign-in, #sign-up, #contact-us, #newsletter {
+	margin: 0 auto;
+	label {
+		display: none;
+	}
+	a {
+		color: $colr-txt-dark;
+		display: block;
+		margin: 0;
+	}
+	.txt-right {
+		text-align: right;
+		clear: both;
+	}
+	.button {
+		width: 8.5rem;
+
+	}
+}
+
+#sign-up {
+	.inline-select {
+		display: inline-block;
+		label {
+			display: inline-block;
+		}
+		select {
+			width: auto;
+			min-width: 7em;
+		}
+	}
+
+}
+
+#newsletter {
+	.button {
+		background-color: $colr-btn-newsleter;
+		width: 8.5rem;
+	}
+}
