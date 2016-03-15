@@ -125,6 +125,7 @@ module.exports = function(grunt) {
                     'scripts/vendors/jquery.placeholder.js',
                     'scripts/vendors/jquery.easing.js',
                     'scripts/vendors/foundation.js',
+                    'scripts/vendors/foundation.equalizer.js',
                     'scripts/vendors/velocity.js',
                     'scripts/vendors/slick.js',
                     'scripts/scripts.js'
@@ -152,6 +153,7 @@ module.exports = function(grunt) {
                         'scripts/vendors/jquery.placeholder.js',
                         'scripts/vendors/jquery.easing.js',
                         'scripts/vendors/foundation.js',
+			'scripts/vendors/foundation.equalizer.js',
                         'scripts/vendors/velocity.js',
                         'scripts/vendors/slick.js',
                         'scripts/scripts.js'
@@ -254,6 +256,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['sass:dev', 'ssi', 'postcss', 'concat', 'imagemin', 'copy:fonts', 'browserSync', 'watch']);
     // run grunt deploy for a distribution ready product
     grunt.registerTask('deploy', ['clean', 'sass:deploy', 'ssi', 'postcss', 'uglify', 'imagemin', 'copy:fonts', 'gh-pages']);
+	grunt.registerTask('backend', ['mocha_istanbul']);
 
 };
 
