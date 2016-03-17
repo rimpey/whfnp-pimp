@@ -15,7 +15,9 @@
 
     <!-- fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
     <!-- style sheet -->
     <link href="styles/styles.css" text="text/css" rel="stylesheet"> 
     
@@ -174,66 +176,74 @@
             <form id="sign-up" method="POST" action="">
                 
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="medium-4 medium-push-2 columns">
                         <label for="fname">First name:</label>
                         <input type="text" name="fname" placeholder="First Name" required>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="medium-4 medium-pull-2 columns">
                         <label for="sname">Surname name:</label>
                         <input type="text" name="sname" placeholder="Surname" required>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="medium-4 medium-push-2 columns">
                         <label for="email">Email:</label>
                         <input type="email" name="email" placeholder="Email" required>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="medium-4 medium-pull-2 columns">
                         <label for="cemail">Confirm Email:</label>
                         <input type="email" name="cemail" placeholder="Confirm Email" required>
                     </div>
                 </div>
                 
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="medium-4 medium-push-2 columns">
                         <label for="phone">Telephone:</label>
                         <input type="tel" name="phone" placeholder="Telephone" required>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="medium-4 medium-pull-2 columns">
+                        <label for="twitter">Twitter:</label>
+                        <input type="text" name="twitter" placeholder="Twitter" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="medium-4 medium-push-2 columns">
                         <label for="country">Country:</label>
                         <input type="text" name="country" placeholder="Country" required>
                     </div>
+<!--                    <div class="row">-->
+<!--                         <div class="large-3 columns">-->
+                    <div class="medium-2 medium-push-2 columns">
+                            <label for="city">City:</label>
+                            <input type="text" name="city" placeholder="City" required>
+                        </div>
+<!--                        <div class="large-3 columns">-->
+                    <div class="medium-2 medium-pull-2 columns">
+                            <label for="postcode">Post Code:</label>
+                            <input type="tel" name="phone" placeholder="Post Code" required>
+                        </div>
+<!--                    </div>-->
                 </div>
 
                 <div class="row">
-                    <div class="large-6 columns">
-                        <label for="city">City:</label>
-                        <input type="text" name="city" placeholder="City" required>
-                    </div>
-                    <div class="large-6 columns">
-                        <label for="postcode">Post Code:</label>
-                        <input type="tel" name="phone" placeholder="Post Code" required>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="large-6 columns">
+                    <div class="medium-4 medium-push-2 columns">
                         <label for="password">Password:</label>
                         <input type="tel" name="phone" placeholder="Password" required>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="medium-4 medium-pull-2 columns">
                         <label for="cpassword">Confirm Password:</label>
                         <input type="password" name="cpassword" placeholder="Confirm Password">
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="medium-4 medium-push-2 columns">
                         <label for="position">Current Position:</label>
                         <input type="text" name="city" placeholder="Current Position" required>
                     </div>
-                    <div class="large-6 columns inline-select">
+                    <div class="medium-4 medium-pull-2 columns inline-select">
                         <label>I am a:</label>
                         <select name="usertype">
                           <option value="cause" selected>Marketer</option> 
@@ -243,13 +253,19 @@
                 </div>
                 
                 <div class="row">
-                    <div class="small-12 columns inline-select">                        
+                    <div class="small-8 small-push-2 columns inline-select">                        
                         <label><input type="checkbox" name="terms" checked="checked"> I agree to the terms &amp; conditions</label>
                     </div>
                 </div>
                 
                 <div class="row">
-                    <div class="small-12 columns">                        
+                    <div class="small-8 small-push-2 columns inline-select">                        
+                        <label><input type="checkbox" name="terms" checked="checked"> Sign me up for the newsletter</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="small-8 small-offset-2 columns">                        
                         <input class="button left" type="submit" value="Submit">
                     </div>
                 </div>
