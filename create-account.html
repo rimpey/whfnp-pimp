@@ -213,18 +213,14 @@
                         <label for="country">Country:</label>
                         <input type="text" name="country" placeholder="Country" required>
                     </div>
-<!--                    <div class="row">-->
-<!--                         <div class="large-3 columns">-->
                     <div class="medium-2 medium-push-2 columns">
-                            <label for="city">City:</label>
-                            <input type="text" name="city" placeholder="City" required>
-                        </div>
-<!--                        <div class="large-3 columns">-->
+                        <label for="city">City:</label>
+                        <input type="text" name="city" placeholder="City" required>
+                    </div>
                     <div class="medium-2 medium-pull-2 columns">
-                            <label for="postcode">Post Code:</label>
-                            <input type="tel" name="phone" placeholder="Post Code" required>
-                        </div>
-<!--                    </div>-->
+                        <label for="postcode">Post Code:</label>
+                        <input type="tel" name="phone" placeholder="Post Code" required>
+                    </div>
                 </div>
 
                 <div class="row">
@@ -243,11 +239,25 @@
                         <label for="position">Current Position:</label>
                         <input type="text" name="city" placeholder="Current Position" required>
                     </div>
+<!--
                     <div class="medium-4 medium-pull-2 columns inline-select">
-                        <label>I am a:</label>
+                         <label>I am a:</label>
                         <select name="usertype">
-                          <option value="cause" selected>Marketer</option> 
-                          <option value="marketer">Cause</option>
+                            <option value="Iam" selected>I am a ...</option>
+                            <option value="marketer">Marketer</option> 
+                            <option value="cause">Cause</option>
+                        </select>
+                    </div>
+-->
+                </div>
+                
+                <div class="row">
+                    <div class="medium-4 medium-push-2 columns inline-select">
+<!--                         <label>I am a:</label>-->
+                        <select id="standard-dropdown" name="usertype">
+                            <option value="Iam" selected>I am a ...</option>
+                            <option value="marketer">Marketer</option> 
+                            <option value="cause">Cause</option>
                         </select>
                     </div>
                 </div>
