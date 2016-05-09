@@ -123,10 +123,10 @@ module.exports = function(grunt) {
                     'scripts/vendors/fastclick.js',
                     'scripts/vendors/jquery.cookie.js',
                     'scripts/vendors/jquery.placeholder.js',
+                    'scripts/vendors/jquery.selectBox.js',
                     'scripts/vendors/jquery.easing.js',
                     'scripts/vendors/foundation.js',
                     'scripts/vendors/foundation.equalizer.js',
-                    'scripts/vendors/velocity.js',
                     'scripts/vendors/slick.js',
                     'scripts/scripts.js'
               ],
@@ -151,10 +151,10 @@ module.exports = function(grunt) {
                         'scripts/vendors/fastclick.js',
                         'scripts/vendors/jquery.cookie.js',
                         'scripts/vendors/jquery.placeholder.js',
+                        'scripts/vendors/jquery.selectBox.js',
                         'scripts/vendors/jquery.easing.js',
                         'scripts/vendors/foundation.js',
-			'scripts/vendors/foundation.equalizer.js',
-                        'scripts/vendors/velocity.js',
+			            'scripts/vendors/foundation.equalizer.js',
                         'scripts/vendors/slick.js',
                         'scripts/scripts.js'
 					]

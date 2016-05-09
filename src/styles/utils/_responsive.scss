@@ -18,6 +18,34 @@
         width: 45%;
     } 
     
+    // HERO PANEL
+    // ==========
+
+    
+    // add space below register with social media on LHS of hero panel at mobile size
+    .h4-hero-socialregister {
+    
+        h4 {
+
+            padding-bottom: rem-calc(15);
+        }
+    }
+    
+    .hero-continue {
+    
+        .button {
+
+            margin-top: rem-calc(20); 
+        }
+    }
+    
+    // jquery dropdown plugin not used at mobile size - prefer the radio button selection
+    // make standard drop down visible - hidden for tablet and desktop
+    #standard-dropdown {
+
+        visibility: visible;  
+    }
+    
     
     // CAUSES SLIDER
     // ===============
@@ -108,6 +136,16 @@
         visibility: hidden;  
     }
     
+    // HERO PANEL
+    // ==========
+    
+    // jquery dropdown plugin not used at mobile size - prefer the radio button selection
+    // make standard drop down visible - hidden for tablet and desktop
+    #standard-dropdown {
+
+        visibility: hidden;  
+    }
+    
     
     // TALKABOUT PANEL 
     // ===============
@@ -173,5 +211,15 @@
     .header-register {
         visibility: visible;
     }
-     
+    
+    // HERO PANEL
+    // ==========
+        
+    .h2-hero {
+    
+        div {
+            white-space: nowrap;
+        }
+    }
+            
 }
