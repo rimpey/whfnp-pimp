@@ -136,6 +136,8 @@
     background-color: $colr-pnl-marketers;
     position: relative;
     
+    // more styling in slider.scss
+    
     &:before {
         @include triangle (38, $colr-pnl-marketers);
     }
